@@ -1,0 +1,487 @@
+<!Doctype.html>
+<html>
+<head>
+    <style>
+        
+        img{
+            width: 100px;
+            height: 100px;
+            
+        }
+        
+        #selection option {
+    padding-left: 50px;
+    height: 30px;
+    background-size: 50%;
+}
+
+        
+.q {
+    width: 100px;
+    height: 100px;
+    background-color: maroon;
+    box-shadow: 10px 10px 5px #888888;
+    display: inline-block;
+    border: solid;
+    
+}
+        .w{
+            text-align: center;
+        }
+        
+        
+        .noclick {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999; /* or maybe higher */
+
+    background-color: transparent;
+}
+        
+
+    
+    
+    
+    </style>
+    
+</head>
+    <h1>Hiragana Tutor App</h1>
+    <body>
+        <div class="w">
+        <div class="q"  onclick="a.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Japanese_Hiragana_kyokashotai_A.svg/500px-Japanese_Hiragana_kyokashotai_A.svg.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/d/d8/Hiragana_%E3%81%82_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Japanese_Hiragana_kyokashotai_A.svg/500px-Japanese_Hiragana_kyokashotai_A.svg.png';">
+            <audio id="a">
+                    <source src="http://www.guidetojapanese.org/audio/a.mp3" type="audio/mpeg">
+                </audio>
+            <p>a</p>
+        </div>
+        
+        <div class="q" onclick="i.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Japanese_Hiragana_kyokashotai_I.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Hiragana_%E3%81%84_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Japanese_Hiragana_kyokashotai_I.png';">
+                        <audio id="i">
+                    <source src="http://www.guidetojapanese.org/audio/i.mp3" type="audio/mpeg">
+                </audio>
+            <p>i</p>
+            
+        </div>
+        
+        <div class="q" onclick="u.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Japanese_Hiragana_kyokashotai_U.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/7/7f/Hiragana_%E3%81%86_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/9/90/Japanese_Hiragana_kyokashotai_U.png';">
+                        <audio id="u">
+                    <source src="http://www.guidetojapanese.org/audio/u.mp3" type="audio/mpeg">
+                </audio>
+            <p>u</p>
+        </div>
+        
+        <div class="q" onclick="e.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Japanese_Hiragana_kyokashotai_E.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/4/4f/Hiragana_%E3%81%88_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/b/be/Japanese_Hiragana_kyokashotai_E.png';" >
+                        <audio id="e">
+                    <source src="http://www.guidetojapanese.org/audio/e.mp3" type="audio/mpeg">
+                </audio>
+            <p>e</p>
+        </div>
+        
+        <div class="q" onclick="o.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Japanese_Hiragana_kyokashotai_O.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Hiragana_%E3%81%8A_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/3/3b/Japanese_Hiragana_kyokashotai_O.png';">
+                        <audio id="o">
+                    <source src="http://www.guidetojapanese.org/audio/o.mp3" type="audio/mpeg">
+                </audio>
+            <p>o</p>
+        </div>
+        
+        <div class="q" onclick="ka.play()">    
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Japanese_Hiragana_kyokashotai_KA.svg/500px-Japanese_Hiragana_kyokashotai_KA.svg.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/9/97/Hiragana_%E3%81%8B_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Japanese_Hiragana_kyokashotai_KA.svg/500px-Japanese_Hiragana_kyokashotai_KA.svg.png';" >
+                        <audio id="ka">
+                    <source src="http://www.guidetojapanese.org/audio/ka.mp3" type="audio/mpeg">
+                </audio>
+            <p>ka</p>
+            </div>
+            
+        <div class="q" onclick="ki.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Japanese_Hiragana_kyokashotai_KI.svg/500px-Japanese_Hiragana_kyokashotai_KI.svg.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/1/18/Hiragana_%E3%81%8D_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Japanese_Hiragana_kyokashotai_KI.svg/500px-Japanese_Hiragana_kyokashotai_KI.svg.png';" >
+                        <audio id="ki">
+                    <source src="http://www.guidetojapanese.org/audio/ki.mp3" type="audio/mpeg">
+                </audio>
+            <p>ki</p>
+        </div>
+        
+            
+        <div class="q" onclick="ku;play()">    
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Japanese_Hiragana_kyokashotai_KU.svg/500px-Japanese_Hiragana_kyokashotai_KU.svg.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/6/68/Hiragana_%E3%81%8F_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Japanese_Hiragana_kyokashotai_KU.svg/500px-Japanese_Hiragana_kyokashotai_KU.svg.png';" >
+                        <audio id="ku">
+                    <source src="http://www.guidetojapanese.org/audio/ku.mp3" type="audio/mpeg">
+                </audio>
+            <p>ku</p>
+            </div>
+        
+            <div class="q" onclick="ke.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Japanese_Hiragana_kyokashotai_KE.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/5/57/Hiragana_%E3%81%91_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/4/4d/Japanese_Hiragana_kyokashotai_KE.png';">
+                            <audio id="a">
+                    <source src="http://www.guidetojapanese.org/audio/ke.mp3" type="audio/mpeg">
+                </audio>
+                <p>ke</p>
+            </div>
+        
+        <div class="q" onclick="ko.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Japanese_Hiragana_kyokashotai_KO.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/8/83/Hiragana_%E3%81%93_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/f/f3/Japanese_Hiragana_kyokashotai_KO.png';">
+                        <audio id="ko">
+                    <source src="http://www.guidetojapanese.org/audio/ko.mp3" type="audio/mpeg">
+                </audio>
+            <p>ko</p>
+            </div>
+            
+            
+        <div class="q" onclick="sa.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Japanese_Hiragana_kyokashotai_SA.svg/500px-Japanese_Hiragana_kyokashotai_SA.svg.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/7/79/Hiragana_%E3%81%95_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Japanese_Hiragana_kyokashotai_SA.svg/500px-Japanese_Hiragana_kyokashotai_SA.svg.png';">
+                        <audio id="sa">
+                    <source src="http://www.guidetojapanese.org/audio/sa.mp3" type="audio/mpeg">
+                </audio>
+            <p>sa</p>
+            </div>
+            
+            
+        <div class="q" onclick="si.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Japanese_Hiragana_kyokashotai_SI.svg/500px-Japanese_Hiragana_kyokashotai_SI.svg.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Hiragana_%E3%81%97_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Japanese_Hiragana_kyokashotai_SI.svg/500px-Japanese_Hiragana_kyokashotai_SI.svg.png';">
+                        <audio id="si">
+                    <source src="http://www.guidetojapanese.org/audio/shi.mp3" type="audio/mpeg">
+                </audio>
+            <p>si</p>
+            </div>
+            
+            
+        <div class="q" onclick="su.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Japanese_Hiragana_kyokashotai_SU.svg/500px-Japanese_Hiragana_kyokashotai_SU.svg.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/0/05/Hiragana_%E3%81%99_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Japanese_Hiragana_kyokashotai_SU.svg/500px-Japanese_Hiragana_kyokashotai_SU.svg.png';">
+                        <audio id="su">
+                    <source src="http://www.guidetojapanese.org/audio/su.mp3" type="audio/mpeg">
+                </audio>
+            <p>su</p>
+        </div>
+            
+            
+        <div class="q" onclick="se.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Japanese_Hiragana_kyokashotai_SE.svg/500px-Japanese_Hiragana_kyokashotai_SE.svg.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/7/7a/Hiragana_%E3%81%9B_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Japanese_Hiragana_kyokashotai_SE.svg/500px-Japanese_Hiragana_kyokashotai_SE.svg.png';">
+                        <audio id="se">
+                    <source src="http://www.guidetojapanese.org/audio/se.mp3" type="audio/mpeg">
+                </audio>
+            <p>se</p>
+        </div>
+            
+            
+        <div class="q" onclick="so.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Japanese_Hiragana_kyokashotai_SO.svg/500px-Japanese_Hiragana_kyokashotai_SO.svg.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/5/5b/Hiragana_%E3%81%9D_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Japanese_Hiragana_kyokashotai_SO.svg/500px-Japanese_Hiragana_kyokashotai_SO.svg.png';">
+                        <audio id="so">
+                    <source src="http://www.guidetojapanese.org/audio/so.mp3" type="audio/mpeg">
+                </audio>
+            <p>so</p>
+        </div>
+            
+            
+        <div class="q" onclick="ta.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Japanese_Hiragana_kyokashotai_TA.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Hiragana_%E3%81%9F_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/b/b7/Japanese_Hiragana_kyokashotai_TA.png';">
+                        <audio id="ta">
+                    <source src="http://www.guidetojapanese.org/audio/ta.mp3" type="audio/mpeg">
+                </audio>
+            <p>ta</p>
+        </div>
+            
+            
+            
+        <div class="q" onclick="ti.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Japanese_Hiragana_kyokashotai_TI.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/3/32/Hiragana_%E3%81%A1_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/a/ad/Japanese_Hiragana_kyokashotai_TI.png';">
+                        <audio id="ti">
+                    <source src="http://www.guidetojapanese.org/audio/chi.mp3" type="audio/mpeg">
+                </audio>
+            <p>ti</p>
+        </div>
+            
+            
+        <div class="q" onclick="tu.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Japanese_Hiragana_kyokashotai_TU.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/0/08/Hiragana_%E3%81%A4_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/c/c9/Japanese_Hiragana_kyokashotai_TU.png';">
+                        <audio id="tu">
+                    <source src="http://www.guidetojapanese.org/audio/tsu.mp3" type="audio/mpeg">
+                </audio>
+            <p>tu</p>
+        </div>
+            
+            
+        <div class="q" onclick="te.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Japanese_Hiragana_kyokashotai_TE.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/1/15/Hiragana_%E3%81%A6_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/9/96/Japanese_Hiragana_kyokashotai_TE.png';">
+                        <audio id="te">
+                    <source src="http://www.guidetojapanese.org/audio/te.mp3" type="audio/mpeg">
+                </audio>
+            <p>te</p>
+        </div>
+            
+            
+        <div class="q" onclick="to.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Japanese_Hiragana_kyokashotai_TO.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/6/6e/Hiragana_%E3%81%A8_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/0/07/Japanese_Hiragana_kyokashotai_TO.png';">
+                        <audio id="to">
+                    <source src="http://www.guidetojapanese.org/audio/to.mp3" type="audio/mpeg">
+                </audio>
+            <p>to</p>
+        </div>
+            
+            
+        <div class="q" onclick="na.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Japanese_Hiragana_kyokashotai_NA.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/8/83/Hiragana_%E3%81%AA_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/7/72/Japanese_Hiragana_kyokashotai_NA.png';">
+                        <audio id="na">
+                    <source src="http://www.guidetojapanese.org/audio/na.mp3" type="audio/mpeg">
+                </audio>
+            <p>na</p>
+        </div>
+            
+            
+        <div class="q" onclick="ni.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Japanese_Hiragana_kyokashotai_NI.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/2/27/Hiragana_%E3%81%AB_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/3/37/Japanese_Hiragana_kyokashotai_NI.png';">
+                        <audio id="ni">
+                    <source src="http://www.guidetojapanese.org/audio/ni.mp3" type="audio/mpeg">
+                </audio>
+            <p>ni</p>
+        </div>
+            
+            
+        <div class="q" onclick="nu.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Japanese_Hiragana_kyokashotai_NU.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Hiragana_%E3%81%AC_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Japanese_Hiragana_kyokashotai_NU.png';">
+                        <audio id="nu">
+                    <source src="http://www.guidetojapanese.org/audio/nu.mp3" type="audio/mpeg">
+                </audio>
+            <p>nu</p>
+        </div>
+            
+        <div class="q" onclick="ne.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Japanese_Hiragana_kyokashotai_NE.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/0/0a/Hiragana_%E3%81%AD_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/c/c0/Japanese_Hiragana_kyokashotai_NE.png';">
+                        <audio id="a">
+                    <source src="http://www.guidetojapanese.org/audio/ne.mp3" type="audio/mpeg">
+                </audio>
+            <p>ne</p>
+        </div>
+            
+            
+        <div class="q" onclick="no.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Japanese_Hiragana_kyokashotai_NO.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/0/05/Hiragana_%E3%81%AE_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/7/71/Japanese_Hiragana_kyokashotai_NO.png';">
+                        <audio id="no">
+                    <source src="http://www.guidetojapanese.org/audio/no.mp3" type="audio/mpeg">
+                </audio>
+            <p>no</p>
+        </div>
+            
+            
+        <div class="q" onclick="ha.play()">    
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Japanese_Hiragana_kyokashotai_HA.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/4/43/Hiragana_%E3%81%AF_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Japanese_Hiragana_kyokashotai_HA.png';">
+                        <audio id="ha">
+                    <source src="http://www.guidetojapanese.org/audio/ha.mp3" type="audio/mpeg">
+                </audio>
+            <p>ha</p>
+        </div>
+            
+            
+        <div class="q" onclick="hi.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/%E3%81%B2_%E6%95%99%E7%A7%91%E6%9B%B8%E4%BD%93.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/4/40/Hiragana_%E3%81%B2_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/2/24/%E3%81%B2_%E6%95%99%E7%A7%91%E6%9B%B8%E4%BD%93.png';">
+                        <audio id="hi">
+                    <source src="http://www.guidetojapanese.org/audio/hi.mp3" type="audio/mpeg">
+                </audio>
+            <p>hi</p>
+        </div>
+            
+            
+        <div class="q" onclick="hu.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Japanese_Hiragana_kyokashotai_HU.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/1/1f/Hiragana_%E3%81%B5_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Japanese_Hiragana_kyokashotai_HU.png';">
+                        <audio id="hu">
+                    <source src="http://www.guidetojapanese.org/audio/fu.mp3" type="audio/mpeg">
+                </audio>
+            <p>hu</p>
+        </div>
+            
+            
+        <div class="q" onclick="he.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Japanese_Hiragana_kyokashotai_HE.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/4/40/Hiragana_%E3%81%B8_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Japanese_Hiragana_kyokashotai_HE.png';">
+                        <audio id="he">
+                    <source src="http://www.guidetojapanese.org/audio/he.mp3" type="audio/mpeg">
+                </audio>
+            <p>he</p>
+        </div>
+            
+            
+        <div class="q" onclick="ho.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Japanese_Hiragana_kyokashotai_HO.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/9/96/Hiragana_%E3%81%BB_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/6/6c/Japanese_Hiragana_kyokashotai_HO.png';">
+                        <audio id="a">
+                    <source src="http://www.guidetojapanese.org/audio/ho.mp3" type="audio/mpeg">
+                </audio>
+            <p>ho</p>
+        </div>
+            
+            
+        <div class="q" onclick="ma.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Japanese_Hiragana_kyokashotai_MA.svg/500px-Japanese_Hiragana_kyokashotai_MA.svg.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/6/65/Hiragana_%E3%81%BE_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Japanese_Hiragana_kyokashotai_MA.svg/500px-Japanese_Hiragana_kyokashotai_MA.svg.png';">
+                        <audio id="ma">
+                    <source src="http://www.guidetojapanese.org/audio/ma.mp3" type="audio/mpeg">
+                </audio>
+            <p>ma</p>
+        </div>
+            
+            
+        <div class="q" onclick="mi.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Japanese_Hiragana_kyokashotai_MI.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/d/d7/Hiragana_%E3%81%BF_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/6/60/Japanese_Hiragana_kyokashotai_MI.png';">
+                        <audio id="mi">
+                    <source src="http://www.guidetojapanese.org/audio/mi.mp3" type="audio/mpeg">
+                </audio>
+            <p>mi</p>
+        </div>
+            
+            
+        <div class="q" onclick="mu.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Japanese_Hiragana_kyokashotai_MU.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/1/1f/Hiragana_%E3%82%80_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/f/f3/Japanese_Hiragana_kyokashotai_MU.png';" >
+                        <audio id="mu">
+                    <source src="http://www.guidetojapanese.org/audio/mu.mp3" type="audio/mpeg">
+                </audio>
+            <p>mu</p>
+        </div>
+            
+            
+        <div class="q" onclick="me.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Japanese_Hiragana_kyokashotai_ME.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/5/58/Hiragana_%E3%82%81_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/1/1c/Japanese_Hiragana_kyokashotai_ME.png';" >
+                        <audio id="me">
+                    <source src="http://www.guidetojapanese.org/audio/me.mp3" type="audio/mpeg">
+                </audio>
+            <p>me</p>
+        </div>
+            
+            
+        <div class="q" onclick="mo.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Japanese_Hiragana_kyokashotai_MO.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Hiragana_%E3%82%82_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/f/f5/Japanese_Hiragana_kyokashotai_MO.png';">
+                        <audio id="mo">
+                    <source src="http://www.guidetojapanese.org/audio/mo.mp3" type="audio/mpeg">
+                </audio>
+            <p>mo</p>
+        </div>
+            
+            
+        <div class="q" onclick="ya.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Japanese_Hiragana_kyokashotai_YA.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/0/07/Hiragana_%E3%82%84_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/a/a6/Japanese_Hiragana_kyokashotai_YA.png';">
+                        <audio id="ya">
+                    <source src="http://www.guidetojapanese.org/audio/ya.mp3" type="audio/mpeg">
+                </audio>
+            <p>ya</p>
+        </div>
+            
+            
+        <div class="q" onclick="yu.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Japanese_Hiragana_kyokashotai_YU.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/7/78/Hiragana_%E3%82%86_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/c/cc/Japanese_Hiragana_kyokashotai_YU.png';">
+                        <audio id="yu">
+                    <source src="http://www.guidetojapanese.org/audio/yu.mp3" type="audio/mpeg">
+                </audio>
+            <p>yu</p>
+        </div>
+            
+            
+        <div class="q" onclick="yo.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Japanese_Hiragana_kyokashotai_YO.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/8/80/Hiragana_%E3%82%88_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/1/10/Japanese_Hiragana_kyokashotai_YO.png';">
+                        <audio id="yo">
+                    <source src="http://www.guidetojapanese.org/audio/yo.mp3" type="audio/mpeg">
+                </audio>
+            <p>yo</p>
+        </div>
+            
+            
+        <div class="q" onclick="ra.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Japanese_Hiragana_kyokashotai_RA.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/6/6c/Hiragana_%E3%82%89_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/2/20/Japanese_Hiragana_kyokashotai_RA.png';">
+                        <audio id="ra">
+                    <source src="http://www.guidetojapanese.org/audio/ra.mp3" type="audio/mpeg">
+                </audio>
+            <p>ra</p>
+        </div>
+            
+            
+        <div class="q" onclick="ri.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Japanese_Hiragana_kyokashotai_RI.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/9/9f/Hiragana_%E3%82%8A_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/7/7d/Japanese_Hiragana_kyokashotai_RI.png';">
+                        <audio id="ri">
+                    <source src="http://www.guidetojapanese.org/audio/ri.mp3" type="audio/mpeg">
+                </audio>
+            <p>ri</p>
+        </div>
+            
+            
+        <div class="q" onclick="ru.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Japanese_Hiragana_kyokashotai_RU.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/2/26/Hiragana_%E3%82%8B_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/c/c5/Japanese_Hiragana_kyokashotai_RU.png';">
+                        <audio id="ru">
+                    <source src="http://www.guidetojapanese.org/audio/ru.mp3" type="audio/mpeg">
+                </audio>
+            <p>ru</p>
+        </div>
+            
+            
+        <div class="q" onclick="re.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Japanese_Hiragana_kyokashotai_RE.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/6/6c/Hiragana_%E3%82%8C_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Japanese_Hiragana_kyokashotai_RE.png';">
+                        <audio id="re">
+                    <source src="http://www.guidetojapanese.org/audio/re.mp3" type="audio/mpeg">
+                </audio>
+            <p>re</p>
+        </div>
+            
+            
+        <div class="q" onclick="ro.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Japanese_Hiragana_kyokashotai_RO.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/3/35/Hiragana_%E3%82%8D_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/7/70/Japanese_Hiragana_kyokashotai_RO.png';">
+                        <audio id="ro">
+                    <source src="http://www.guidetojapanese.org/audio/ro.mp3" type="audio/mpeg">
+                </audio>
+            <p>ro</p>
+        </div>
+            
+            
+        <div class="q" onclick="wa.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Japanese_Hiragana_kyokashotai_WA.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/6/6a/Hiragana_%E3%82%8F_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/0/01/Japanese_Hiragana_kyokashotai_WA.png';">
+                        <audio id="wa">
+                    <source src="http://www.guidetojapanese.org/audio/wa.mp3" type="audio/mpeg">
+                </audio>
+            <p>wa</p>
+        </div>
+            
+            
+        <div class="q" onclick="wo.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Japanese_Hiragana_kyokashotai_WO.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/6/64/Hiragana_%E3%82%92_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/b/b7/Japanese_Hiragana_kyokashotai_WO.png';">
+                        <audio id="wo">
+                    <source src="http://www.guidetojapanese.org/audio/wo.mp3" type="audio/mpeg">
+                </audio>
+            <p>wo</p>
+        </div>
+            
+            
+        <div class="q" onclick="n.play()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Japanese_Hiragana_kyokashotai_N.png"  onmouseover="this.src = 'https://upload.wikimedia.org/wikipedia/commons/f/f6/Hiragana_%E3%82%93_stroke_order_animation.gif';"  onmouseout="this.src = 'https://upload.wikimedia.org/wikipedia/commons/7/77/Japanese_Hiragana_kyokashotai_N.png';">
+                        <audio id="n">
+                    <source src="http://www.guidetojapanese.org/audio/n.mp3" type="audio/mpeg">
+                </audio>
+            <p>n</p>
+        </div>
+            </div>
+        
+        
+        <select id="selection">
+    <option>list1</option>
+    <option>list2</option>
+</select>
+        
+   
+        
+        
+        
+        
+        
+        
+        
+        
+            
+
+        
+        
+        
+    
+    
+    
+    
+    
+    </body>
+</html>
